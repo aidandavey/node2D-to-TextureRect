@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjhf8b4c6djq7"]
+
+[ext_resource type="PackedScene" uid="uid://cruwoh15axpw0" path="res://Scenes/Inventory/inventory_interface.tscn" id="1_5val1"]
+[ext_resource type="Script" path="res://main.gd" id="1_88lrp"]
+[ext_resource type="PackedScene" uid="uid://uotkdvwd7ixv" path="res://Scenes/Items/item_1.tscn" id="3_ejqj3"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_88lrp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InventoryInterface" parent="CanvasLayer" instance=ExtResource("1_5val1")]
+unique_name_in_owner = true
+
+[node name="Item_1" parent="." instance=ExtResource("3_ejqj3")]
+position = Vector2(886, 409)

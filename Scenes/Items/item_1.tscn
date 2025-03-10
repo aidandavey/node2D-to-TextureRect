@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://uotkdvwd7ixv"]
+
+[ext_resource type="Texture2D" uid="uid://d032oagqte4yo" path="res://Scenes/Items/test_pngs/background.png" id="1_m5laq"]
+[ext_resource type="Texture2D" uid="uid://cvx6xgkqyh4hy" path="res://Scenes/Items/test_pngs/A.png" id="2_fpn0b"]
+[ext_resource type="Texture2D" uid="uid://bmhbqai47degq" path="res://Scenes/Items/test_pngs/test.png" id="3_tiqw2"]
+[ext_resource type="Texture2D" uid="uid://50wg2qavaovy" path="res://Scenes/Items/test_pngs/scene.png" id="4_s7kd4"]
+
+[node name="Item_1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m5laq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(54, 60)
+texture = ExtResource("2_fpn0b")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
+texture = ExtResource("3_tiqw2")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
+texture = ExtResource("4_s7kd4")
