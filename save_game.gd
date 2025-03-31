@@ -12,7 +12,11 @@ func get_save_data()->Dictionary:
 	var dict: Dictionary = {}	
 	if main_scene:
 		if main_scene.get("inventory_data"):
-			save_dict_to_file(main_scene.get("inventory_data").save())
+			dict.get_or_add(main_scene.get("inventory_data").save())
+			
+		# if other_scene.get("other_data"):
+			#dict.get_or_add(other_scene.get("other_data").save())
+			
 	return dict
 
 
@@ -21,4 +25,5 @@ func save_dict_to_file(dict: Dictionary):
 
 func save_game():
 	save_dict_to_file(get_save_data())
+	
 	
