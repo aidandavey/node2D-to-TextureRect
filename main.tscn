@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjhf8b4c6djq7"]
+[gd_scene load_steps=5 format=3 uid="uid://bjhf8b4c6djq7"]
 
 [ext_resource type="PackedScene" uid="uid://cruwoh15axpw0" path="res://Scenes/Inventory/inventory_interface.tscn" id="1_5val1"]
 [ext_resource type="Script" path="res://main.gd" id="1_88lrp"]
 [ext_resource type="PackedScene" uid="uid://uotkdvwd7ixv" path="res://Scenes/Items/item_1.tscn" id="3_ejqj3"]
+[ext_resource type="Script" path="res://save_game.gd" id="4_rsvmj"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_88lrp")
@@ -14,3 +15,7 @@ unique_name_in_owner = true
 
 [node name="Item_1" parent="." instance=ExtResource("3_ejqj3")]
 position = Vector2(886, 409)
+
+[node name="SaveGame" type="Node" parent="." node_paths=PackedStringArray("main_scene")]
+script = ExtResource("4_rsvmj")
+main_scene = NodePath("..")

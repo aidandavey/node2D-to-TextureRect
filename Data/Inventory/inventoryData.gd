@@ -6,6 +6,15 @@ signal inventory_interact(inv_data:InventoryData, index:int, button_index:int)
 
 @export var slots:Array[InventorySlot]
 
+func save()->Dictionary:
+	var dict:Dictionary = {}
+	
+	for i in slots.size():
+		if slots[i]:
+			dict.get_or_add(i, slots[i].save())
+	
+	return dict
+
 func on_slot_clicked(index:int, button_index:int):
 	inventory_interact.emit(self, index, button_index)
 
